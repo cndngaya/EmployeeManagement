@@ -1,0 +1,24 @@
+<div class="fluid-container">
+    <table class="table table-dark">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Gender</th>
+            <th scope="col">DOB</th>
+            <th scope="col">Dept.</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employeeList; let id = index">
+            <th scope="row">{{id+1}}</th>
+            <td>{{employee.firstName}}</td>
+            <td>{{employee.lastName}}</td>
+            <td>{{employee.gender}}</td>
+            <td>{{employee.dob | date: 'dd mm, yyyy'}}</td>
+            <td>{{employee.department}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
